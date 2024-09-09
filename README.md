@@ -6,6 +6,11 @@
 
 This project focuses on the classification of satellite images into categories such as "Cloudy", "Desert", "Green_Area", and "Water". The dataset is a collection of satellite images, each sized 256x256 pixels, sourced from Kaggle. The primary goal is to classify these images using deep learning techniques, achieving a high accuracy through fine-tuning pre-trained models.
 
+The core of the project is located in the src folder, which contains the main files, including:
+- satellite_image_classification.ipynb: This Jupyter notebook contains the entire workflow, from data preprocessing to model training and evaluation.
+
+By utilizing convolutional neural networks (CNN) and transfer learning with NasNet Mobile, the model achieves a classification accuracy of 95%. This setup demonstrates the effectiveness of deep learning techniques for satellite image classification tasks
+
 ### Key Highlights:
 - **Dataset**: Satellite images in various categories, prepared for image classification tasks.
 - **Model Architecture**: The model utilizes the **NasNet Mobile** architecture, fine-tuned to achieve **95% accuracy**.
@@ -44,23 +49,34 @@ from tensorflow.keras.preprocessing.image import ImageDataGenerator
 
 ## Usage
 
-To run the project, follow these steps:
+To run this project on your local machine, follow these steps:
 
-1. Clone the repository:
+1. **Clone the repository**:
    ```bash
    git clone <repository-url>
    ```
 
-2. Install the required dependencies:
+2. **Navigate to the `src` folder**:
+   The `src` folder contains the Jupyter notebook (`satellite_image_classification.ipynb`) and the necessary scripts for running the project.
+   ```bash
+   cd src
+   ```
+
+3. **Install the required dependencies**:
+   Before running the notebook, install all required packages listed in `requirements.txt`.
    ```bash
    pip install -r requirements.txt
    ```
 
-3. Prepare the dataset:
-   - Download the satellite image classification dataset from Kaggle and place it in the appropriate folder.
+4. **Prepare the dataset**:
+   - Download the satellite image classification dataset from Kaggle.
+   - Place the dataset in the appropriate folder as referenced in the notebook.
 
-4. Train the model:
-   - Run the Jupyter notebook to train and fine-tune the model.
+5. **Run the Jupyter notebook**:
+   Execute the notebook to preprocess the data, train the model, and evaluate its performance.
+   ```bash
+   jupyter notebook satellite_image_classification.ipynb
+   ```
 
 ## Results
 
